@@ -1,0 +1,18 @@
+# .NET build artefacts
+api/bin/
+api/obj/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+
+# Docker volumes (if ever bind-mounted locally)
+.postgres-data/
+
+# Local env overrides (copy .env.example and customise)
+.env
+
+# Editor
+.DS_Store
