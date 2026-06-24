@@ -17,6 +17,10 @@ cd crud-product
 docker compose up --build
 ```
 
+> **Credentials**: The compose stack uses `${POSTGRES_PASSWORD:-postgres}` — works out of the box.
+> To override, copy `.env.example` to `.env` and set your own values before running `docker compose up`.
+
+
 - Frontend: <http://localhost:3000>
 - API (Swagger UI): <http://localhost:5000/swagger>
 

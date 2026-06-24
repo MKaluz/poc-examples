@@ -11,5 +11,8 @@ frontend/.env.*.local
 # Docker volumes (if ever bind-mounted locally)
 .postgres-data/
 
+# Local env overrides (copy .env.example and customise)
+.env
+
 # Editor
 .DS_Store
