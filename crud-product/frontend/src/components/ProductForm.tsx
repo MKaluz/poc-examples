@@ -50,8 +50,8 @@ export function ProductForm({ product, onSuccess, onCancel }: ProductFormProps) 
       if (isAxiosError(error) && error.response?.status === 422) {
         const problem = error.response.data as ValidationProblem
         for (const [field, messages] of Object.entries(problem.errors ?? {})) {
-          const key = field.charAt(0).toLowerCase() + field.slice(1) as keyof FormValues
-          setError(key, { message: messages[0] })
+          // API returns camelCase keys that match form field names directly.
+          setError(field as keyof FormValues, { message: messages[0] })
         }
       }
     },

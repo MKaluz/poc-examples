@@ -100,6 +100,7 @@ static void MigrateDatabase(WebApplication app)
 
 static Dictionary<string, string[]> Validate(ProductRequest r)
 {
+    // Error keys use camelCase to match JSON serialisation and frontend field names.
     var errors = new Dictionary<string, string[]>();
     if (string.IsNullOrWhiteSpace(r.Name))
         errors["name"] = ["Name is required."];
